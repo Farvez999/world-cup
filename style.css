@@ -20,7 +20,12 @@ main {
     background-color: black;
 }
 
-.flex {
+.header-section {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
     display: flex;
     justify-content: center;
 }
