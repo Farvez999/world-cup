@@ -307,6 +307,11 @@ nav a {
         margin-right: 10%; */
     }
 
+    .watch-all {
+        display: none;
+    }
+
+    /* footer section style start */
     .footer-section .manues nav {
         display: flex;
         flex-direction: column;
@@ -322,6 +327,8 @@ nav a {
         width: 100%;
     }
 
+    /* footer section style end */
+
 }
 
 /* Mobile Devices end*/
@@ -333,7 +340,16 @@ nav a {
         margin-left: 5%;
         margin-right: 5%;
         margin-top: 20px;
-        padding: 20px;
+    }
+
+    .header-title {
+        padding: 30px;
+    }
+
+    .header-image img {
+        width: 323px;
+        height: 520px;
+        margin-right: 100px;
     }
 
     .blog-container {
@@ -370,6 +386,21 @@ nav a {
     .blogs .blog-banner img {
         width: 350px;
     }
+
+    .watch-all {
+        margin-bottom: 100px;
+    }
+
+    .watch-all a {
+        color: white;
+        width: 131px;
+        height: 47px;
+        text-decoration: none;
+        background-color: #DD0000;
+        padding: 10px 30px;
+    }
+
+    /* fotter section style start  */
 
     .footer-section .manues nav {
         margin: 10px 100px;
