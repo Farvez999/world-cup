@@ -6,12 +6,12 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: white;
-    margin-bottom: 100px;
+    margin: 0;
     padding: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -21,29 +21,39 @@ h1 {
 
 
 main {
-    width: 1321px;
-    height: 646px;
-    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* header section start */
-.header-section {
-    display: flex;
-}
 
 .container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background: #161616;
     display: flex;
+    align-items: center;
     justify-content: center;
+    border-radius: 20px;
 }
 
 .header-title {
     color: white;
-    width: 531px;
-    height: 424px;
-    margin-top: 111px;
-    margin-left: 106px;
-    margin-bottom: 111px;
+    width: 40%;
 }
+
+.header-image {
+    width: 50%;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+}
+
 
 /* watch link button start */
 .watch-link-button {
@@ -115,34 +125,28 @@ main {
 
 /* watch link button end  */
 
-.header-image img {
-    width: 581px;
-    height: 613px;
-    margin-top: 33px;
-    margin-left: 24px;
-    margin-right: 80px;
-}
-
 /* header section end */
 
 /* blogs section start  */
 .blog-container {
+    width: 90%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
     display: flex;
-    flex-direction: row;
 }
 
 /* blogs-button-section start  */
 .blogs-button {
     background: black;
-    width: 312px;
+    width: 20%;
     height: 312px;
-    margin-top: 100px;
     margin-bottom: 100px;
     padding: 5px;
 }
 
 .blogs-button a {
-    width: 252px;
+    width: 80%;
     height: 64px;
     color: black;
     text-decoration: none;
@@ -151,38 +155,40 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
-    margin-left: 35px;
-    margin-right: 35px;
-    margin-bottom: 30px;
+    margin: 30px 20px;
+}
+
+#blog-button {
+    color: white;
+    background-color: #DD0000;
 }
 
 /* blogs-button-section end  */
 
 /* blogs section start  */
 .blogs {
+    width: 50%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 24px;
-    margin: 100px 20px;
-    /* border: 1px solid gray; */
+    grid-gap: 10px;
+    margin-left: 1%;
 }
 
 .blogs .blog-banner img {
-    width: 312px;
+    width: 290px;
     height: 175px;
 }
 
 .blog {
-    border: 1px solid gray;
     margin-bottom: 20px;
+    box-shadow: 2px 2px 5px black;
     border-radius: 10px;
-    width: 312px;
+    width: 290px;
     height: 362px;
 }
 
 .blog-details {
-    padding: 20px;
+    padding: 10px;
 }
 
 .blog-details a {
@@ -210,4 +216,124 @@ main {
 
 /* blogs section end  */
 
-/* blogs section end  */
+.footer-section {
+    width: 100%;
+    height: 444px;
+    text-align: center;
+    padding: 3px;
+    background-color: black;
+    color: white;
+}
+
+.footer-goal {
+    margin-top: 130px;
+}
+
+hr {
+    margin: 50px 140px;
+}
+
+nav a {
+    width: 100px;
+    height: 32px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.social-icon i {
+    font-size: 30px;
+    margin: 10px 10px;
+    padding: 5px;
+    color: white;
+}
+
+
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media only screen and (max-width:688px) {
+    .container {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1, 1fr;
+    }
+
+    .header-title {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .header-image {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding-top: 20px;
+    }
+
+    .blog-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1, 1fr;
+    }
+
+    .blogs-button {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+        background-color: white;
+    }
+
+    .blogs-button a {
+        border: 1px solid gray;
+    }
+
+    .blogs {
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+        grid-template-columns: 1, 1fr;
+    }
+
+    /* .blog {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    } */
+
+
+}
+
+/* Tablate Devices */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+
+}
